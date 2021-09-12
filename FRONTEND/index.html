@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet"/>
+    <title>Saisie d'un compte client</title>
+  </head>
+  <body>
+    <h1>Saisie d'un compte client</h1>
+
+    <div class="m-5">
+        <form id="formClient">
+            <div class="row">
+                <div class="col">
+                    <select class="form form-control" name="gender" id="genderInput">
+                        <option selected>Civilité</option>
+                        <option value="H">Homme</option>
+                        <option value="F">Femme</option>
+                        <option value="A">Autre</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <input type="text" class="form form-control" placeholder="Nom" name="lastName" id="lastNameInput"/>
+                </div>
+                <div class="col">
+                    <input type="text" class="form form-control" placeholder="Prénom" name="firstName" id="firstNameInput"/>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <input type="text" class="form form-control" placeholder="Adresse" name="address" id="addressInput"/>
+                </div>
+                <div class="col">
+                    <input type="number" class="form form-control" placeholder="Code postal" name="zipCode" id="zipCodeInput"/>
+                </div>
+                <div class="col">
+                    <input type="text" class="form form-control" placeholder="Ville" name="city" id="cityInput"/>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <input type="text" class="form form-control" placeholder="Numéro de téléphone" name="phone" id="phoneInput" />
+            </div>
+            <div class="row mt-5">
+                <input type="email" class="form form-control" placeholder="E-mail" name="email" id="emailInput"/>
+                <div class="alert alert-danger d-none" role="alert" id="emailAlert">
+                    Veuillez saisir une adresse mail valide
+                  </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <input type="password" class="form form-control" placeholder="Mot de passe" name="password" id="passwordInput"/>
+                </div>
+                <div class="col">
+                    <input type="password" class="form form-control" placeholder="Confirmation de mot de passe" name="passwordConfirmation" id="passwordConfirmationInput"/>
+                </div>
+                <div class="alert alert-danger d-none" role="alert" id="passwordAlert">
+                    Le mot de passe et la confirmation sont différents
+                  </div>
+            </div>
+            <div class="row mt-5">
+                <input type="text" class="form form-control" placeholder="Login" name="login" id="loginConfirmation"/>
+            </div>
+            <div class="row mt-5">
+                <input type="submit" class='btn btn-success' value="Valider"/> 
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="scripts/form.js"></script>
+    </body>
+</html>
